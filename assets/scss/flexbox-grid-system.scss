@@ -1,0 +1,74 @@
+$breakpoints: (
+  xs: 320px,
+  sm: 768px,
+  md: 1024px,
+  lg: 1280px,
+  xl: 1400px,
+);
+
+// FLEXBOX SYSTEM //
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.col {
+  flex-direction: column;
+}
+
+@each $breakpoint, $breakpoint-setting in $breakpoints {
+  @media (min-width: #{$breakpoint-setting}) {
+    @for $i from 1 to 13 {
+      .col-#{$breakpoint}-#{$i} {
+        flex: 0 0 auto;
+        width: #{(100 * $i) / 12 + "%"};
+      }
+    }
+  }
+}
+
+// GRID SYSTEM //
+
+.grid {
+  display: grid;
+}
+
+.grid-auto {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+@each $breakpoint, $breakpoint-setting in $breakpoints {
+  @media (min-width: #{$breakpoint-setting}) {
+    @for $i from 1 to 13 {
+      .grid-col-#{$breakpoint}-#{$i} {
+        grid-column: span #{$i};
+      }
+      .grid-row-#{$breakpoint}-#{$i} {
+        grid-row: span #{$i};
+      }
+    }
+  }
+}
+
+@for $i from 1 to 13 {
+  .grid-row-#{$i} {
+    grid-row: #{$i};
+  }
+
+  .grid-col-#{$i} {
+    grid-column: #{$i};
+  }
+
+  .grid-cols-#{$i} {
+    grid-template-columns: repeat(#{$i}, 1fr);
+  }
+
+  .grid-rows-#{$i} {
+    grid-template-rows: repeat(#{$i}, 1fr);
+  }
+}
