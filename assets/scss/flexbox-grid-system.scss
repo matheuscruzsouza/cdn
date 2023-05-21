@@ -40,7 +40,7 @@ $breakpoints: (
 }
 
 @each $breakpoint, $breakpoint-setting in $breakpoints {
-  @media (min-width: #{$breakpoint-setting}) {
+  @media (max-width: #{$breakpoint-setting}) {
     @for $i from 12 to 0 {
       .col-#{$breakpoint}-#{$i} {
         flex: 0 0 auto;
@@ -61,7 +61,7 @@ $breakpoints: (
 }
 
 @each $breakpoint, $breakpoint-setting in $breakpoints {
-  @media (min-width: #{$breakpoint-setting}) {
+  @media (max-width: #{$breakpoint-setting}) {
     @for $i from 12 to 0 {
       .span-col-#{$breakpoint}-#{$i} {
         grid-column: span #{$i};
