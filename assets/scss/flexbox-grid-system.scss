@@ -1,9 +1,10 @@
 $breakpoints: (
-  xl: 1400px,
-  lg: 1280px,
-  md: 1024px,
-  sm: 768px,
   xs: 320px,
+  sm: 768px,
+  md: 1024px,
+  lg: 1280px,
+  xl: 1400px,
+  xxl: 2560px,
 );
 
 .gap-xs {
@@ -39,8 +40,15 @@ $breakpoints: (
   flex-direction: column;
 }
 
+@for $i from 12 to 0 {
+  .col-#{$i} {
+    flex: 0 0 auto;
+    width: #{(100 * $i) / 12 + "%"};
+  }
+}
+
 @each $breakpoint, $breakpoint-setting in $breakpoints {
-  @media (max-width: #{$breakpoint-setting}) {
+  @media (min-width: #{$breakpoint-setting}) {
     @for $i from 12 to 0 {
       .col-#{$breakpoint}-#{$i} {
         flex: 0 0 auto;
@@ -61,7 +69,7 @@ $breakpoints: (
 }
 
 @each $breakpoint, $breakpoint-setting in $breakpoints {
-  @media (max-width: #{$breakpoint-setting}) {
+  @media (min-width: #{$breakpoint-setting}) {
     @for $i from 12 to 0 {
       .span-col-#{$breakpoint}-#{$i} {
         grid-column: span #{$i};
