@@ -50,6 +50,9 @@ $breakpoints: (
     width: calc(#{(100 * $i) / 12 + "%"} - var(--gap, 0px));
   }
 }
+.col-0 {
+  display: none;
+}
 
 @each $breakpoint, $breakpoint-setting in $breakpoints {
   @media (min-width: #{$breakpoint-setting}) {
@@ -58,6 +61,9 @@ $breakpoints: (
         flex: 0 0 auto;
         width: calc(#{(100 * $i) / 12 + "%"} - var(--gap, 0px));
       }
+    }
+    .col-#{$breakpoint}-0 {
+      display: none;
     }
   }
 }

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://matheuscruzsouza.github.io/cdn/assets/css/flexbox-grid-system.min.css"
+    />
+    <link rel="stylesheet" href="assets/scss/aurora.css">
+    <link rel="stylesheet" href="assets/scss/fluent.css">
+    <link rel="stylesheet" href="assets/scss/human.css">
+    <link rel="stylesheet" href="assets/scss/material.css">
+    <link rel="stylesheet" href="assets/scss/tabs.css">
+
+    <link rel="alternate" type="application/rss+xml" href="https://matheuscruzsouza.github.io/cdn/feed.rss" title="Feed RSS">
+  </head>
+  <body>
+    <div class="tabset">
+      <input type="radio" name="tab-label" class="tab-label" id="radio-aurora" aria-controls="aurora">
+      <label for="radio-aurora">Aurora</label>
+      
+      <input type="radio" name="tab-label" class="tab-label" id="radio-fluent" aria-controls="fluent" checked>
+      <label fluent for="radio-fluent">Fluent</label>
+
+      <input type="radio" name="tab-label" class="tab-label" id="radio-human" aria-controls="human">
+      <label for="radio-human">Human</label>
+
+      <input type="radio" name="tab-label" class="tab-label" id="radio-material" aria-controls="material">
+      <label for="radio-material">Material</label>
+
+      <div class="tab-panels">
+        <section id="fluent" class="tab-panel">
+          <div class="flex row gap-xs">
+            <div class="col-xl-4 col-md-6 col-12">
+              <input fluent switch type="checkbox" name="fluent-switch" id="fluent-switch">
+              <label fluent for="fluent-switch">Switch label</label>
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+              <input fluent type="checkbox" name="checkbox" id="fluent-checkbox">
+              <label fluent for="fluent-checkbox">Checkbox label</label>
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+              <input fluent type="radio" name="radio" id="fluent-radio">
+              <label fluent for="fluent-radio">Radio label</label>
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+              <input fluent type="button" name="radio" id="" value="Default button">
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+              <input fluent primary type="button" name="radio" id="" value="Primary button">
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+              <input fluent flat type="button" name="radio" id="" value="Flat button">
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+              <div fluent class="tabset">
+                <input type="radio" name="fluent-tab-label" class="tab-label" id="radio-home" aria-controls="home" checked>
+                <label for="radio-home">Home</label>
+
+                <input type="radio" name="fluent-tab-label" class="tab-label" id="radio-pages" aria-controls="pages">
+                <label for="radio-pages">Pages</label>
+
+                <input type="radio" name="fluent-tab-label" class="tab-label" id="radio-documents" aria-controls="documents">
+                <label for="radio-documents">Documents</label>
+
+                <input type="radio" name="fluent-tab-label" class="tab-label" id="radio-activity" aria-controls="activity">
+                <label for="radio-activity">Activity</label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="aurora" class="tab-panel">
+          <div class="flex row gap-xs">
+            <div class="col-xl-4 col-md-6 col-12">
+              <input aurora switch type="checkbox" name="" id="">
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+              <input aurora type="checkbox" name="" id="">
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+              <input aurora type="radio" name="radio" id="">
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+              <input aurora type="button" name="radio" id="" value="Button">
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+              <input aurora primary type="button" name="radio" id="" value="Button">
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+              <input aurora flat type="button" name="radio" id="" value="Button">
+            </div>
+          </div>
+        </section>
+
+
+        <section id="human" class="tab-panel">
+          <div class="flex row gap-xs">
+            <div class="col-xl-4 col-md-6 col-12">
+              <input human switch type="checkbox" name="" id="">
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+              <input human type="checkbox" name="" id="">
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+              <input human type="radio" name="radio" id="">
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+              <input human type="button" name="radio" id="" value="Button">
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+              <input human primary type="button" name="radio" id="" value="Button">
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+              <input human flat type="button" name="radio" id="" value="Button">
+            </div>
+          </div>
+        </section>
+
+
+        <section id="material" class="tab-panel">
+          <div class="flex row gap-xs">
+            <div class="col-xl-4 col-md-6 col-12">
+              <input material switch type="checkbox" name="" id="">
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+              <input material type="checkbox" name="" id="">
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+              <input material type="radio" name="radio" id="">
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+              <input material type="button" name="radio" id="" value="Button">
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+              <input material primary type="button" name="radio" id="" value="Button">
+            </div>
+            <div class="col-xl-4 col-md-6 col-12">
+              <input material flat type="button" name="radio" id="" value="Button">
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="flex row gap-md">
+      <div class="col-xl-4 col-md-6 col-12">teste</div>
+      <div class="col-xl-4 col-md-6 col-12">TESTE</div>
+      <div class="col-xl-4 col-md-6 col-12">teste</div>
+      <div class="col-xl-4 col-md-6 col-12">TESTE</div>
+      <div class="col-xl-4 col-md-6 col-12">teste</div>
+      <div class="col-xl-4 col-md-6 col-12">TESTE</div>
+    </div>
+  </body>
+</html>

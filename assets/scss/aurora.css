@@ -1,0 +1,128 @@
+.flex.row.gap-xs {
+  background-color: var(--bg-color);
+}
+
+input[aurora][type=checkbox][switch] {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #c6c6c6;
+  outline: none;
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+input[aurora][type=checkbox][switch]:checked {
+  background: #03a9f4;
+}
+input[aurora][type=checkbox][switch]:checked:before {
+  left: 20px;
+}
+input[aurora][type=checkbox][switch]:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transition-property: left;
+  transition-duration: 0.5s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+input[aurora][type=checkbox]:not([switch]) {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #c6c6c6;
+  outline: none;
+  border-radius: 4px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+input[aurora][type=checkbox]:not([switch]):hover:before, input[aurora][type=checkbox]:not([switch]):checked:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 10px;
+  top: 5px;
+  left: 10.5px;
+  transition: 0.5s;
+  background-color: #fff;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  transform: rotate(40deg);
+}
+input[aurora][type=checkbox]:not([switch]):hover:after, input[aurora][type=checkbox]:not([switch]):checked:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 5px;
+  top: 9px;
+  left: 6.2px;
+  transition: 0.5s;
+  background-color: #fff;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  transform: rotate(311deg);
+}
+input[aurora][type=checkbox]:not([switch]):not(:checked):hover:before, input[aurora][type=checkbox]:not([switch]):not(:checked):hover::after {
+  background-color: #333333;
+}
+input[aurora][type=checkbox]:not([switch]):checked {
+  background: #03a9f4;
+}
+input[aurora][type=checkbox]:not([switch]):checked:before, input[aurora][type=checkbox]:not([switch]):checked::after {
+  background-color: #fff;
+}
+input[aurora][type=radio] {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #c6c6c6;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+input[aurora][type=radio]:hover:before, input[aurora][type=radio]:checked:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  left: 5px;
+  transition: 0.5s;
+  background-color: #fff;
+  border-radius: 5px;
+}
+input[aurora][type=radio]:not(:checked):hover:before {
+  background-color: #605e5c;
+}
+input[aurora][type=radio]:checked {
+  background: #03a9f4;
+}
+input[aurora][type=radio]:checked:before {
+  background-color: #fff;
+}
+
+input[aurora][type=checkbox][switch] ~ .flex.row.gap-xs {
+  --bg-color: rgb(255, 255, 255);
+}
+
+input[aurora][type=checkbox][switch]:checked ~ .flex.row.gap-xs {
+  --bg-color: #5c5c5c;
+}/*# sourceMappingURL=aurora.css.map */
