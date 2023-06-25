@@ -1,4 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/segoe-ui-4');
+@import url('https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css');
 
 :root {
     --fluent-primary: #0078d4;
@@ -13,6 +14,7 @@
 label[fluent] {
     line-height: 20px;
     cursor: pointer;
+    margin-left: 5px;
 }
 
 input[fluent] {
@@ -244,97 +246,131 @@ button[fluent] {
         font-weight: 400;
         background-color: transparent;
         color: rgb(0, 120, 212);
+        border: none;
 
         &:hover {
             color: rgb(16, 110, 190);
             background-color: rgb(243, 242, 241);
         }
     }
+
+    &[icon] {
+        font-weight: 400;
+        background-color: transparent;
+        color: rgb(0, 120, 212);
+        border: none;
+        min-width: 35px;
+        padding: 9px;
+
+        &:hover {
+            color: rgb(16, 110, 190);
+            background-color: rgb(243, 242, 241);
+        }
+
+        .ms-Icon {
+            font-size: 16px;
+        }
+    }
 }
 
-.tabset[fluent] {
-    > input[type="radio"].tab-label {
-        appearance: none;
-        margin: 0;
-        width: 0;
+.tabs[fluent] {
+    position: relative;   
+    min-height: 200px; /* This part sucks */
+    clear: both;
+    margin: 25px 0;
 
-        &:focus-visible + label {
-            outline: 2px solid #0078d4;
-            border-radius: 3px;
+    .tab {
+        float: left;
+
+        > input[type="radio"].tab-label {
+            appearance: none;
+            margin: 0;
+            width: 0;
+    
+            &:focus-visible + label {
+                outline: 2px solid #0078d4;
+                border-radius: 3px;
+            }
         }
-    }
-
-    > label {
-        position: relative;
-        display: inline-block;
-        text-align: center;
-        padding: 15px 17px;
-        border: 1px solid transparent;
-        border-bottom: 0;
-        cursor: pointer;
-        font-weight: 400;
-        min-width: 40px;
-        border-radius: 2px;
-        font-family: "Segoe UI", sans-serif;
-
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 10%;
-            width: 80%;
-            height: 4px;
+    
+        > label {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            padding: 15px 15px;
+            border: 1px solid transparent;
+            border-bottom: 0;
+            cursor: pointer;
+            font-weight: normal;
+            min-width: 40px;
+            border-radius: 2px;
+            font-family: "Segoe UI", sans-serif;
+    
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 10%;
+                width: 80%;
+                height: 4px;
+                background: transparent;
+            }
+        }
+    
+        > label:hover,
+        > input:focus + label,
+        > input:checked + label {
+            color: inherit;
+        }
+    
+        > label:hover{
+            background-color: #c8c8c841;
+        }
+    
+        > label:hover::after {
             background: transparent;
         }
-    }
+    
+        > input:checked + label:hover::after{
+            left: 0;
+            width: 100%;
+        }
+    
+        > input:focus + label::after,
+        > input:checked + label::after {
+            left: 10%;
+            width: 80%;
+            background: #0078d4;
+            transition: .5s;
+        }
+    
+        > input:checked + label {
+            border-color: transparent;
+            border-bottom: 2px solid #fff;
+            margin-bottom: -1px;
+            font-weight: 700;
+            padding: 15px 15px;
+            letter-spacing: -0.001527em;
+        }
+    
+        .content {
+            position: absolute;
+            top: 60px;
+            left: 0;
+            background: white;
+            right: 0;
+            bottom: 0;
+            padding: 20px;
+        }
 
-    > label:hover,
-    > input:focus + label,
-    > input:checked + label {
-        color: inherit;
-    }
+        [type=radio]:checked ~ label {
+            background: white;
+            border-bottom: 1px solid white;
+            z-index: 2;
+        }
 
-    > label:hover{
-        background-color: #c8c8c841;
-    }
-
-    > label:hover::after {
-        background: transparent;
-    }
-
-    > input:checked + label:hover::after{
-        left: 0;
-        width: 100%;
-    }
-
-    > input:focus + label::after,
-    > input:checked + label::after {
-        left: 10%;
-        width: 80%;
-        background: #0078d4;
-        transition: .5s;
-    }
-
-    > input:checked + label {
-        border-color: transparent;
-        border-bottom: 2px solid #fff;
-        margin-bottom: -1px;
-        font-weight: 700;
-        padding: 15px 15px;
-    }
-
-    .tab-panel {
-        display: none;
-        padding: 30px 0;
-        border-top: 1px solid #ccc;
-    }
-
-    > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
-    > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
-    > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
-    > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
-    > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
-    > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
-        display: block;
+        [type=radio]:checked ~ label ~ .content {
+            z-index: 1;
+        }
     }
 }

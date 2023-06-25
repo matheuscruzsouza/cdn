@@ -4,15 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://matheuscruzsouza.github.io/cdn/assets/css/flexbox-grid-system.min.css"
-    />
-    <link rel="stylesheet" href="assets/scss/aurora.css">
-    <link rel="stylesheet" href="assets/scss/fluent.css">
-    <link rel="stylesheet" href="assets/scss/human.css">
-    <link rel="stylesheet" href="assets/scss/material.css">
-    <link rel="stylesheet" href="assets/scss/tabs.css">
+    <link rel="stylesheet" href="assets/scss/flexbox-grid-system.css" />
+    <link rel="stylesheet" href="assets/scss/aurora.css" />
+    <link rel="stylesheet" href="assets/scss/fluent.css" />
+    <link rel="stylesheet" href="assets/scss/human.css" />
+    <link rel="stylesheet" href="assets/scss/material.css" />
+    <link rel="stylesheet" href="assets/scss/tabs.css" />
 
     <link rel="alternate" type="application/rss+xml" href="https://matheuscruzsouza.github.io/cdn/feed.rss" title="Feed RSS">
   </head>
@@ -33,15 +30,15 @@
       <div class="tab-panels">
         <section id="fluent" class="tab-panel">
           <div class="flex row gap-xs">
-            <div class="col-xl-4 col-md-6 col-12">
+            <div class="flex items-center col-xl-4 col-md-6 col-12">
               <input fluent switch type="checkbox" name="fluent-switch" id="fluent-switch">
               <label fluent for="fluent-switch">Switch label</label>
             </div>
-            <div class="col-xl-4 col-md-6 col-12">
+            <div class="flex items-center col-xl-4 col-md-6 col-12">
               <input fluent type="checkbox" name="checkbox" id="fluent-checkbox">
               <label fluent for="fluent-checkbox">Checkbox label</label>
             </div>
-            <div class="col-xl-4 col-md-6 col-12">
+            <div class="flex items-center col-xl-4 col-md-6 col-12">
               <input fluent type="radio" name="radio" id="fluent-radio">
               <label fluent for="fluent-radio">Radio label</label>
             </div>
@@ -54,19 +51,42 @@
             <div class="col-xl-4 col-md-6 col-12">
               <input fluent flat type="button" name="radio" id="" value="Flat button">
             </div>
-            <div class="col-xl-4 col-md-6 col-12">
-              <div fluent class="tabset">
-                <input type="radio" name="fluent-tab-label" class="tab-label" id="radio-home" aria-controls="home" checked>
-                <label for="radio-home">Home</label>
+            <div class="col-12">
+              <div fluent class="tabs">
+                <div class="tab">
+                  <input type="radio" name="fluent-tab-label" class="tab-label" id="radio-home" aria-controls="home" checked>
+                  <label for="radio-home">Home</label>
+                  <section id="home" class="content">
+                    home
 
-                <input type="radio" name="fluent-tab-label" class="tab-label" id="radio-pages" aria-controls="pages">
-                <label for="radio-pages">Pages</label>
-
-                <input type="radio" name="fluent-tab-label" class="tab-label" id="radio-documents" aria-controls="documents">
-                <label for="radio-documents">Documents</label>
-
-                <input type="radio" name="fluent-tab-label" class="tab-label" id="radio-activity" aria-controls="activity">
-                <label for="radio-activity">Activity</label>
+                    <button fluent icon><i class="ms-Icon ms-Icon--Like" aria-hidden="true"></i></button>
+                    <button fluent icon><i class="ms-Icon ms-Icon--SingleBookmark" aria-hidden="true"></i></button>
+                    <button fluent icon><i class="ms-Icon ms-Icon--Brightness" aria-hidden="true"></i></button>
+                  </section>
+                </div>
+                <div class="tab">
+                  <input type="radio" name="fluent-tab-label" class="tab-label" id="radio-pages" aria-controls="pages">
+                  <label for="radio-pages">Pages</label>
+                  <section id="pages" class="content">
+                    pages
+                  </section>
+                </div>
+                <div class="tab">
+                  <input type="radio" name="fluent-tab-label" class="tab-label" id="radio-documents" aria-controls="documents">
+                  <label for="radio-documents">Documents</label>
+                  <section id="documents" class="content">
+                    documents
+                  </section>
+                </div>
+                <div class="tab">
+                  <input type="radio" name="fluent-tab-label" class="tab-label" id="radio-activity" aria-controls="activity">
+                  <label for="radio-activity">Activity</label>
+                  <div class="tab-panels">
+                    <section id="activity" class="content">
+                      activity
+                    </section>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
