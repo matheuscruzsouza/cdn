@@ -9,7 +9,7 @@
         <description>Teste de feed RSS</description>
 
         <item>
-            <guid>https://matheuscruzsouza.github.io/cdn/feed.rss</guid>
+            <guid>https://matheuscruzsouza.github.io/cdn/feed.rss#2</guid>
             <title>Atualização mais nova, mais em cima</title>
             <link>https://matheuscruzsouza.github.io/cdn</link>
             <description>Essa eh a noticia mais nova do meu site. Bla, bla, bla.</description>
@@ -22,7 +22,7 @@
         </item>
 
         <item>
-            <guid>https://matheuscruzsouza.github.io/cdn/feed.rss</guid>
+            <guid>https://matheuscruzsouza.github.io/cdn/feed.rss#1</guid>
             <title>Noticia mais antiga, mais embaixo</title>
             <link>https://matheuscruzsouza.github.io/cdn</link>
             <description>Essa eh a mais velha. Bla, bla, bla.</description>
