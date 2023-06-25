@@ -3,14 +3,14 @@
  xsi:noNamespaceSchemaLocation="feed.xsd" version="2.0">
     <channel>
         <title>Teste</title>
-        <link>http://www.endereçodoseusite.com.etc</link>
+        <link>https://matheuscruzsouza.github.io/cdn</link>
         <description>Teste de feed RSS</description>
 
         <item>
             <title>Atualização mais nova, mais em cima</title>
-            <link>http://seusite.com.etc/noticias/maisnova</link>
+            <link>https://matheuscruzsouza.github.io/cdn</link>
             <description>Essa eh a noticia mais nova do meu site. Bla, bla, bla.</description>
-            <image>http://seusite.com.etc/noticias/maisnova</image>
+            <image>https://matheuscruzsouza.github.io/cdn</image>
             <content>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin libero risus, eleifend a dictum at, finibus ac odio. Proin dignissim vel ex nec luctus. Sed eget viverra odio. Maecenas convallis nec massa nec bibendum. Nunc et urna sed nibh dapibus malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar urna congue lorem convallis luctus. Duis gravida, ante at volutpat pretium, nisi dui suscipit leo, nec lobortis ipsum ipsum sed augue. Praesent quis purus aliquet, porttitor ipsum in, laoreet ex. Cras in sapien lectus. Vivamus id fermentum quam. Proin in arcu a nisl efficitur porttitor quis id sem. Aenean at nisl eu tellus suscipit elementum. Ut mollis tortor vel turpis mollis tristique. Morbi convallis aliquam lorem, vitae tincidunt neque sodales in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
@@ -20,9 +20,9 @@
 
         <item>
             <title>Noticia mais antiga, mais embaixo</title>
-            <link>http://seusite.com.etc/noticias/maisvelha</link>
+            <link>https://matheuscruzsouza.github.io/cdn</link>
             <description>Essa eh a mais velha. Bla, bla, bla.</description>
-            <image>http://seusite.com.etc/noticias/maisvelha</image>
+            <image>https://matheuscruzsouza.github.io/cdn</image>
             <content>
                 Integer ultricies vitae erat sit amet mollis. Nulla pulvinar elit sed gravida ullamcorper. Morbi eget ultrices tellus. Quisque posuere mi sapien, sit amet consequat turpis mollis in. Sed aliquam, nulla id venenatis interdum, ex erat tempus massa, quis dictum diam velit vitae massa. Morbi mattis, dui tincidunt elementum cursus, diam tellus tincidunt nunc, venenatis elementum dui tortor vel neque. Nullam id feugiat quam.
 
